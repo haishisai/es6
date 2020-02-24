@@ -50,7 +50,7 @@
         console.log({...obj2}) // 展开对象 外面需要容器  需要一个对象的容器  数组不需要
 
 
-
+        console.log('---clone---')
 
         let obj = {
             name: 'pd',
@@ -64,10 +64,14 @@
 
         let objClone = { ...obj }  // 特殊用法
         objClone.name = 'pppddd'
+        objClone.money = 1111
         objClone.toy.push('box')
-        console.log(objClone)
         console.log(obj)
+        console.log(objClone)        
         //  浅克隆
+
+    
+
     </script>
 </body>
 
