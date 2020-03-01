@@ -29,11 +29,11 @@
 
 
 
-        // class 没有提升功能 预编译
+        // class 没有提升功能 预编译 
         class Person2 {
-            constructor (name) {
+            constructor (name,m) {
                 this.name = name;
-                this[bbb] = 100;
+                this[bbb] = m;
             }
             sayName(){
                 return 'my name ' + this.name
@@ -44,6 +44,17 @@
         }
         p2 = new Person2('hahah')
         console.log(p2,p2.name,p2.sayName(),p2[aaa]())
+
+        // 继承
+        class Student extends Person2 {
+            constructor(name,m,skill){
+                super(name,m);
+                this.skill = skill
+            }
+        }
+        let p3 = new Student(1,2,'放荡')
+        console.log(p3)
+
     </script>
 </body>
 
