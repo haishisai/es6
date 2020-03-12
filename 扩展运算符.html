@@ -68,10 +68,21 @@
         objClone.toy.push('box')
         console.log(obj)
         console.log(objClone)        
-        //  浅克隆
+        //  结果  浅克隆
 
+
+        
+        function deepClone (obj) {
+          let str = JSON.stringify(obj)
+          // let newObj = JSON.parse(str)
+          let newObj = eval('('+str+')')
+          return newObj
+        }
     
-
+        let c33 = deepClone(obj)
+        c33.toy.push('高达')
+        console.log( c33 )
+        console.log( obj )
     </script>
 </body>
 
